@@ -319,7 +319,9 @@ static void joystickb_raw_axe_set(struct joystick_axe_context* axe, int value)
 {
 	axe->value = value;
 
-	axe->value_adj = joystickb_adjust_analog(value, -32767, 32767);
+	axe->value_adj = joystickb_auto_adjust(axe.code,0,0,value);
+
+//	axe->value_adj = joystickb_adjust_analog(value, -32767, 32767);
 }
 
 static adv_error joystickb_read(int f, int* type, int* code, int* value)
@@ -359,8 +361,8 @@ int joystickb_raw_poll(void)
 	for (i = 0; i < raw_state.mac; ++i) {
 		struct joystick_item_context* item = raw_state.map + i;
 		int ret;
-		while ((ret = joystickb_read(item->f, &type, &code, &value)) == 1) {
 
+		while ((ret = joystickb_read(item->f, &type, &code, &value)) == 1) {
 			/* ignore INIT events */
 			/* some drivers reports bogus values and we don't really need them */
 			if ((type & JS_EVENT_INIT) != 0)

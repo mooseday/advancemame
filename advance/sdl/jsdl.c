@@ -201,7 +201,9 @@ int joystickb_sdl_stick_axe_analog_get(unsigned joystick, unsigned stick, unsign
 
 	r = SDL_JoystickGetAxis(sdl_state.map[joystick], axe);
 
-	r = joystickb_adjust_analog(r, -32768, 32768);
+	r = joystickb_auto_adjust(joystick,stick,axe,value);
+
+//	r = joystickb_adjust_analog(r, -32768, 32768);
 
 	return r;
 }

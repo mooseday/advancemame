@@ -497,3 +497,27 @@ int joystickb_adjust_analog(int value, int low_limit, int high_limit)
 	return r;
 }
 
+
+struct auto_calibrate
+{
+	int low_limit = INT_MAX;
+	int high_limit = INT_MIN;
+};
+
+auto_calibrate s_auto_calibrate[4][4][4];
+
+int joystickb_auto_adjust(int joystick, int stick,int axe,int value)
+{
+	int low_limit = MIN(value, s_auto_calibrate[joystick][stick][axe].low_limit);
+	int high_limit = MIN(value, s_auto_calibrate[joystick][stick][axe].high_limit);
+
+	int adj = joystickb_adjust_analog(value, low_limit, high_limit);
+
+	s_auto_calibrate[joystick][stick][axe].low_limit = low_limit;
+	s_auto_calibrate[joystick][stick][axe].high_limit = high_limit;
+
+	return adj;
+
+}
+
+

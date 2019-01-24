@@ -126,7 +126,7 @@ extern struct joystickb_state_struct joystickb_state;
  * \return Adjusted value.
  */
 int joystickb_adjust_analog(int value, int min, int max);
-
+int joystickb_auto_adjust(int, int);
 void joystickb_reg(adv_conf* config_context, adv_bool auto_detect);
 void joystickb_reg_driver(adv_conf* config_context, joystickb_driver* driver);
 adv_error joystickb_load(adv_conf* config_context);
