@@ -1,0 +1,159 @@
+obj/mame/linux/blend
+obj/mess/linux/blend
+obj/menu/linux/blend
+obj/cfg/linux/blend
+obj/v/linux/blend
+obj/s/linux/blend
+obj/k/linux/blend
+obj/j/linux/blend
+obj/m/linux/blend
+obj/blue/linux/blend
+obj/mame/linux/blend/advance
+obj/mame/linux/blend/advance/blit
+obj/mame/linux/blend/advance/lib
+obj/mame/linux/blend/advance/linux
+obj/mame/linux/blend/advance/osd
+obj/mame/linux/blend/advance/sdl
+obj/mame/linux/blend/cpu
+obj/mame/linux/blend/cpu/adsp2100
+obj/mame/linux/blend/cpu/alph8201
+obj/mame/linux/blend/cpu/arm
+obj/mame/linux/blend/cpu/arm7
+obj/mame/linux/blend/cpu/asap
+obj/mame/linux/blend/cpu/ccpu
+obj/mame/linux/blend/cpu/dsp32
+obj/mame/linux/blend/cpu/dsp56k
+obj/mame/linux/blend/cpu/e132xs
+obj/mame/linux/blend/cpu/g65816
+obj/mame/linux/blend/cpu/h6280
+obj/mame/linux/blend/cpu/h83002
+obj/mame/linux/blend/cpu/hd6309
+obj/mame/linux/blend/cpu/i386
+obj/mame/linux/blend/cpu/i8039
+obj/mame/linux/blend/cpu/i8051
+obj/mame/linux/blend/cpu/i8085
+obj/mame/linux/blend/cpu/i86
+obj/mame/linux/blend/cpu/i8x41
+obj/mame/linux/blend/cpu/i960
+obj/mame/linux/blend/cpu/jaguar
+obj/mame/linux/blend/cpu/konami
+obj/mame/linux/blend/cpu/m37710
+obj/mame/linux/blend/cpu/m6502
+obj/mame/linux/blend/cpu/m6800
+obj/mame/linux/blend/cpu/m68000
+obj/mame/linux/blend/cpu/m6805
+obj/mame/linux/blend/cpu/m6809
+obj/mame/linux/blend/cpu/mc68hc11
+obj/mame/linux/blend/cpu/mips
+obj/mame/linux/blend/cpu/nec
+obj/mame/linux/blend/cpu/pic16c5x
+obj/mame/linux/blend/cpu/powerpc
+obj/mame/linux/blend/cpu/r3000
+obj/mame/linux/blend/cpu/rsp
+obj/mame/linux/blend/cpu/s2650
+obj/mame/linux/blend/cpu/se3208
+obj/mame/linux/blend/cpu/sh2
+obj/mame/linux/blend/cpu/sharc
+obj/mame/linux/blend/cpu/spc700
+obj/mame/linux/blend/cpu/t11
+obj/mame/linux/blend/cpu/tms32010
+obj/mame/linux/blend/cpu/tms32025
+obj/mame/linux/blend/cpu/tms32031
+obj/mame/linux/blend/cpu/tms32051
+obj/mame/linux/blend/cpu/tms34010
+obj/mame/linux/blend/cpu/tms9900
+obj/mame/linux/blend/cpu/upd7810
+obj/mame/linux/blend/cpu/v60
+obj/mame/linux/blend/cpu/v810
+obj/mame/linux/blend/cpu/z180
+obj/mame/linux/blend/cpu/z80
+obj/mame/linux/blend/cpu/z8000
+obj/mame/linux/blend/debug
+obj/mame/linux/blend/drivers
+obj/mame/linux/blend/machine
+obj/mame/linux/blend/sndhrdw
+obj/mame/linux/blend/sound
+obj/mame/linux/blend/vidhrdw
+obj/mame/linux/blend/advance/linux/file.o
+advance/linux/file.c: In function ‘file_config_file_host’:
+advance/linux/file.c:188:68: warning: ‘snprintf’ output may be truncated before the last format character [-Wformat-truncation=]
+   snprintf(FL.file_host_buffer, sizeof(FL.file_host_buffer), "%s/%s", FL.current_dir_buffer, file + 2);
+                                                                    ^
+advance/linux/file.c:188:3: note: ‘snprintf’ output 2 or more bytes (assuming 513) into a destination of size 512
+   snprintf(FL.file_host_buffer, sizeof(FL.file_host_buffer), "%s/%s", FL.current_dir_buffer, file + 2);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+advance/linux/file.c: In function ‘file_config_file_data’:
+advance/linux/file.c:213:69: warning: ‘snprintf’ output may be truncated before the last format character [-Wformat-truncation=]
+    snprintf(FL.file_data_buffer, sizeof(FL.file_data_buffer), "%s/%s", FL.data_dir_buffer, file);
+                                                                     ^
+advance/linux/file.c:213:4: note: ‘snprintf’ output 2 or more bytes (assuming 513) into a destination of size 512
+    snprintf(FL.file_data_buffer, sizeof(FL.file_data_buffer), "%s/%s", FL.data_dir_buffer, file);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+advance/linux/file.c:208:69: warning: ‘snprintf’ output may be truncated before the last format character [-Wformat-truncation=]
+    snprintf(FL.file_data_buffer, sizeof(FL.file_data_buffer), "%s/%s", FL.current_dir_buffer, file + 2);
+                                                                     ^
+advance/linux/file.c:208:4: note: ‘snprintf’ output 2 or more bytes (assuming 513) into a destination of size 512
+    snprintf(FL.file_data_buffer, sizeof(FL.file_data_buffer), "%s/%s", FL.current_dir_buffer, file + 2);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+advance/linux/file.c: In function ‘file_config_file_home’:
+advance/linux/file.c:228:68: warning: ‘snprintf’ output may be truncated before the last format character [-Wformat-truncation=]
+   snprintf(FL.file_home_buffer, sizeof(FL.file_home_buffer), "%s/%s", FL.home_dir_buffer, file);
+                                                                    ^
+advance/linux/file.c:228:3: note: ‘snprintf’ output 2 or more bytes (assuming 513) into a destination of size 512
+   snprintf(FL.file_home_buffer, sizeof(FL.file_home_buffer), "%s/%s", FL.home_dir_buffer, file);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+advance/linux/file.c:223:68: warning: ‘snprintf’ output may be truncated before the last format character [-Wformat-truncation=]
+   snprintf(FL.file_home_buffer, sizeof(FL.file_home_buffer), "%s/%s", FL.current_dir_buffer, file + 2);
+                                                                    ^
+advance/linux/file.c:223:3: note: ‘snprintf’ output 2 or more bytes (assuming 513) into a destination of size 512
+   snprintf(FL.file_home_buffer, sizeof(FL.file_home_buffer), "%s/%s", FL.current_dir_buffer, file + 2);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+advance/linux/file.c: In function ‘file_config_dir_multidir’:
+advance/linux/file.c:238:56: warning: ‘snprintf’ output may be truncated before the last format character [-Wformat-truncation=]
+   snprintf(FL.dir_buffer, sizeof(FL.dir_buffer), "%s/%s", FL.home_dir_buffer, tag);
+                                                        ^
+advance/linux/file.c:238:3: note: ‘snprintf’ output 2 or more bytes (assuming 513) into a destination of size 512
+   snprintf(FL.dir_buffer, sizeof(FL.dir_buffer), "%s/%s", FL.home_dir_buffer, tag);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+advance/linux/file.c:236:56: warning: ‘:’ directive output may be truncated writing 1 byte into a region of size between 0 and 511 [-Wformat-truncation=]
+   snprintf(FL.dir_buffer, sizeof(FL.dir_buffer), "%s/%s:%s/%s", FL.home_dir_buffer, tag, FL.data_dir_buffer, tag);
+                                                        ^
+advance/linux/file.c:236:3: note: ‘snprintf’ output 4 or more bytes (assuming 1026) into a destination of size 512
+   snprintf(FL.dir_buffer, sizeof(FL.dir_buffer), "%s/%s:%s/%s", FL.home_dir_buffer, tag, FL.data_dir_buffer, tag);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+advance/linux/file.c: In function ‘file_config_dir_singledir’:
+advance/linux/file.c:245:55: warning: ‘snprintf’ output may be truncated before the last format character [-Wformat-truncation=]
+  snprintf(FL.dir_buffer, sizeof(FL.dir_buffer), "%s/%s", FL.home_dir_buffer, tag);
+                                                       ^
+advance/linux/file.c:245:2: note: ‘snprintf’ output 2 or more bytes (assuming 513) into a destination of size 512
+  snprintf(FL.dir_buffer, sizeof(FL.dir_buffer), "%s/%s", FL.home_dir_buffer, tag);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+advance/linux/file.c: In function ‘file_config_dir_singlefile’:
+advance/linux/file.c:252:54: warning: ‘%s’ directive output may be truncated writing up to 511 bytes into a region of size between 0 and 511 [-Wformat-truncation=]
+   snprintf(FL.dir_buffer, sizeof(FL.dir_buffer), "%s:%s", FL.home_dir_buffer, FL.data_dir_buffer);
+                                                      ^~                       ~~~~~~~~~~~~~~~~~~
+advance/linux/file.c:252:3: note: ‘snprintf’ output between 2 and 1024 bytes into a destination of size 512
+   snprintf(FL.dir_buffer, sizeof(FL.dir_buffer), "%s:%s", FL.home_dir_buffer, FL.data_dir_buffer);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+obj/mame/linux/blend/advance/linux/target.o
+obj/mame/linux/blend/advance/linux/os.o
+obj/mame/linux/blend/advance/lib/lcd.o
+obj/mame/linux/blend/advance/osd/thdouble.o
+obj/mame/linux/blend/advance/sdl/ssdl.o
+obj/mame/linux/blend/advance/sdl/msdl.o
+obj/mame/linux/blend/advance/sdl/ksdl.o
+obj/mame/linux/blend/advance/sdl/jsdl.o
+advance/sdl/jsdl.c: In function ‘joystickb_sdl_stick_axe_analog_get’:
+advance/sdl/jsdl.c:204:47: error: ‘value’ undeclared (first use in this function)
+  r = joystickb_auto_adjust(joystick,stick,axe,value);
+                                               ^~~~~
+advance/sdl/jsdl.c:204:47: note: each undeclared identifier is reported only once for each function it appears in
+advance/sdl/jsdl.c:204:6: error: too many arguments to function ‘joystickb_auto_adjust’
+  r = joystickb_auto_adjust(joystick,stick,axe,value);
+      ^~~~~~~~~~~~~~~~~~~~~
+In file included from advance/sdl/jsdl.h:38,
+                 from advance/sdl/jsdl.c:37:
+./advance/lib/joydrv.h:129:5: note: declared here
+ int joystickb_auto_adjust(int, int);
+     ^~~~~~~~~~~~~~~~~~~~~
+make: *** [advance/emu.mak:571: obj/mame/linux/blend/advance/sdl/jsdl.o] Error 1

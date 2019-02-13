@@ -35,6 +35,7 @@
 #include "error.h"
 #include "snstring.h"
 #include "jnone.h"
+#include "limits.h"
 
 struct joystickb_state_struct joystickb_state;
 
@@ -498,25 +499,32 @@ int joystickb_adjust_analog(int value, int low_limit, int high_limit)
 }
 
 
-struct auto_calibrate
+typedef struct auto_calibrate
 {
-	int low_limit = INT_MAX;
-	int high_limit = INT_MIN;
+    int low_limit ;
+    int high_limit;
+    int set;
 };
 
-auto_calibrate s_auto_calibrate[4][4][4];
+struct auto_calibrate s_auto_calibrate[4][4][4];
 
 int joystickb_auto_adjust(int joystick, int stick,int axe,int value)
 {
-	int low_limit = MIN(value, s_auto_calibrate[joystick][stick][axe].low_limit);
-	int high_limit = MIN(value, s_auto_calibrate[joystick][stick][axe].high_limit);
+    struct auto_calibrate *  s = &s_auto_calibrate[joystick][stick][axe];
+    if(!s->set){
+        s->low_limit = INT_MAX;
+        s->high_limit = INT_MAX;
+        s->set = 1;
+    }
+    int low_limit = MIN(value, s->low_limit);
+    int high_limit = MIN(value, s->high_limit);
 
-	int adj = joystickb_adjust_analog(value, low_limit, high_limit);
+    int adj = joystickb_adjust_analog(value, low_limit, high_limit);
 
-	s_auto_calibrate[joystick][stick][axe].low_limit = low_limit;
-	s_auto_calibrate[joystick][stick][axe].high_limit = high_limit;
+    s->low_limit = low_limit;
+    s->high_limit = high_limit;
 
-	return adj;
+    return adj;
 
 }
 

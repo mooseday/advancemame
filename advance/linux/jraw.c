@@ -319,7 +319,7 @@ static void joystickb_raw_axe_set(struct joystick_axe_context* axe, int value)
 {
 	axe->value = value;
 
-	axe->value_adj = joystickb_auto_adjust(axe.code,0,0,value);
+	axe->value_adj = joystickb_auto_adjust(axe->code,0,0,value);
 
 //	axe->value_adj = joystickb_adjust_analog(value, -32767, 32767);
 }
